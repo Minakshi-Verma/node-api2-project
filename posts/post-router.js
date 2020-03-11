@@ -39,9 +39,13 @@ router.post("/", (req,res)=>{
     }   
 })
 
-router.post("/:id/commemts", (req,res)=>{
+router.post("/:id/comments", (req,res)=>{
     const id = req.params.id
-    
+   if(comment.post_id !==id){
+    return res.status(404).json({message: "The post with the specified ID does not exist."}) 
+    if(!)   
+   }
+
 })
 
 module.exports = router;
